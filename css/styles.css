@@ -1,4 +1,29 @@
 body {
-    background-color: pink;
-    font-size: 40px;
+    font-size: 20px;
+    margin: 80px;
+    text-align: center;
+    background-image: url(/img/pokemon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:100vh;
+    font-family: "VT323", monospace;
+}
+.pokemon-name { /* This is a class selector for the pokemon from the loop */
+    font-weight: bold;
+    font-size:30px;
+    background-color: black;
+    color:white;
+}
+.pokemon-height { /* This is a class selector for the height from the loop */
+    font-size: 15px;
+    background-color: black;
+    color:white;
+
+}
+.pokemon-message { /* This is a class selector for the message from the loop */
+    color:rgb(248, 204, 8);
+    font-size:18px;
+    font-variant: small-caps;
+    background-color: black;
 }
