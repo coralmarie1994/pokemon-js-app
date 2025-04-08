@@ -3,7 +3,7 @@
 let pokemonRepository= (function () { 
 //CREATES: empty array that will hold pokemon object infolet 
 pokemonList = [];
-  let apiUrl="https://pokeapi.co/api/v2/pokemon/?limit=1000"; //link to API with 1000 pokemon (limt=1000)
+  let apiUrl="https://pokeapi.co/api/v2/pokemon/";
 // CREATES: Function to add pokemon with required keys or
   function add(pokemon) {
     if (
