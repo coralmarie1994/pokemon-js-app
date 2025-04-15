@@ -76,7 +76,7 @@ let pokemonRepository= (function () {
     });
   }
 //CREATES: function for modal details
-function showModal(name, height, weight, types, imageUrl) {
+function showModal(name, imageUrl, height, weight, types) {
   let modalContainer =document.querySelector("#modal-container"); //selects the modal container
   modalContainer.innerHTML = ""; //clears the modal container 
 
@@ -91,26 +91,42 @@ function showModal(name, height, weight, types, imageUrl) {
   let pokemonName=document.createElement("h1"); //creates a header for the modal
   pokemonName.innerText = name; //adds the name of the pokemon to the header 1
 
-  let pokemonHeight = document.createElement("p"); //creates a paragraph for the modal
-  pokemonHeight.innerText = `Height: ${height} m`; //adds the height of the pokemon to the paragraph
-
-  let pokemonWeight = document.createElement("p"); //creates a paragraph for the modal
-  pokemonWeight.innerText = `Weight: ${weight} kg`; //adds the weight of the pokemon to the paragraph
-
-  let pokemonTypes = document.createElement("p"); //creates a paragraph for the modal 
-  pokemonTypes.innerText = `Type: ${types.join(', ')}`; //adds the types of the pokemon to the paragraph
-
-  let pokemonImage = document.createElement("img"); //creates an image for the modal
+   let pokemonImage = document.createElement("img"); //creates an image for the modal
   pokemonImage.setAttribute("src", imageUrl); //sets the source of the image to the imageUrl
   pokemonImage.setAttribute('width', '100%');
   pokemonImage.setAttribute('height', '100%');
 
+
+  let pokemonDetailParagraph = document.createElement("div"); //creates a paragraph for the modal
+  pokemonDetailParagraph.classList.add("pokemon-detail-paragraph");
+  pokemonDetailParagraph.innerText=''; //adds a class to the paragraph
+
+  let pokemonHeight = document.createElement("span"); //creates a paragraph for the modal
+  pokemonHeight.innerText = `
+  Height: ${height} m
+
+  `; //adds the height of the pokemon to the paragraph
+
+  let pokemonWeight = document.createElement("span"); //creates a paragraph for the modal
+  pokemonWeight.innerText = `Weight: ${weight} kg
+
+  `; //adds the weight of the pokemon to the paragraph
+
+  let pokemonTypes = document.createElement("span"); //creates a paragraph for the modal 
+  pokemonTypes.innerText = `Type: ${types.join(', ')}
+  
+  `; //adds the types of the pokemon to the paragraph
+
   modal.appendChild(closeButtonElement);
   modal.appendChild(pokemonName);
+  modal.appendChild(pokemonImage);
+  modal.appendChild(pokemonDetailParagraph)
   modal.appendChild(pokemonHeight);
   modal.appendChild(pokemonWeight);
   modal.appendChild(pokemonTypes);
-  modal.appendChild(pokemonImage);
+  pokemonDetailParagraph.appendChild(pokemonHeight);
+  pokemonDetailParagraph.appendChild(pokemonWeight);
+  pokemonDetailParagraph.appendChild(pokemonTypes);
   modalContainer.appendChild(modal); //appends the modal to the modal container
   modalContainer.classList.add("is-visible"); //adds a class to the modal container to make it visible
   
@@ -137,10 +153,10 @@ function hideModal() {
   function showDetails(pokemon) {
     showModal(
       pokemon.name,
+      pokemon.imageUrl,
       pokemon.height,
       pokemon.weight,
-      pokemon.types.map(type => type.type.name),
-      pokemon.imageUrl
+      pokemon.types.map(type => type.type.name)
     );
   }
 //CREATES: management system for the pokemonList for the function above
