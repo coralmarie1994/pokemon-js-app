@@ -132,6 +132,7 @@ function showModal(name, imageUrl, height, weight, types) {
   
   modalContainer.addEventListener('click',(event) => { //adds an event listener to the modal container)
   let target= event.target; //target is the element that was clicked
+  console.log(event.target);
     if (target === modalContainer) {
     hideModal();
     }
