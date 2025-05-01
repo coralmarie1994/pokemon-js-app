@@ -17,6 +17,7 @@ body {
   height:100vh;
   font-family: "VT323", monospace;
 }
+
 header {
 background-color: rgba(26, 25, 25, 0.5);
 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -151,44 +152,21 @@ padding-top:10px;
 }
 
 /* MEDIA QUERY SMALL DEVICE ADJUST */
-@media all and (max-width: 400px) {
-.catch-em{
-display:none;}
+@media all and (max-width: 425px) {
+.pika {
+height:100px;
+width:auto;
 }
-@media all and (max-width: 680px) {
-  h1 {
-  font-size:100px;
-  margin-left:10px;
-  }
-  .catch-em{
-   margin-left:20px;
-  }
-  ul {
-    grid-template-columns: 1fr; /* single column */
-  }
-
-  .button-class {
-    width: 200px; 
-    height: 200px;
-    font-size: 25px;
-  }
-
-  .modal p {
-    width: 50%; 
-    text-align: center;
-    align-items: center;
-    margin: 10px auto;
-    padding: 30px; 
-  }
-
-  .modal h1 {
-    font-size: 30px;
-  }
-
-  .pokemon-type, .pokemon-height {
-    font-size: 18px; 
-  }
+.squirtle {
+height:80px;
+margin-top:15px;
 }
+.pokeapi {
+  height:68px;
+  width:auto;
+}
+}
+
 /* KEY FRAMES ANIMATION */
 @keyframes wiggle {
   0% { transform: rotate(0deg); }
