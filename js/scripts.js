@@ -2,7 +2,7 @@
 //CREATES: self invoking function 
 let pokemonRepository= (function () { 
   let pokemonList = [];
-  let apiUrl="https://pokeapi.co/api/v2/pokemon/?limit=150";
+  let apiUrl='https://pokeapi.co/api/v2/pokemon/?limit=150';
 //CREATES: Function to display all pokemonList
   function getAll() {
       return pokemonList;
