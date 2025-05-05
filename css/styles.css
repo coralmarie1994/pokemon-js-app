@@ -1,12 +1,12 @@
 :root {
---main-blue:#0075BE;
---secondary-blue: #3b4cca;
---main-yellow: #ffcb05;
---secondary-yellow:#B3A125;
---main-red: #FF0000;
---secondary-red: #CC0000;
---white:whitesmoke;
---grey:rgb(49, 43, 43);
+  --main-blue: #0075be;
+  --secondary-blue: #3b4cca;
+  --main-yellow: #ffcb05;
+  --secondary-yellow: #b3a125;
+  --main-red: #ff0000;
+  --secondary-red: #cc0000;
+  --white: whitesmoke;
+  --grey: rgb(49, 43, 43);
 }
 
 body {
@@ -14,52 +14,53 @@ body {
   margin: 0px auto;
   text-align: center;
   background-color: rgb(94, 87, 87);
-  height:100vh;
+  height: 100vh;
   font-family: "VT323", monospace;
 }
 
 header {
-background-color: rgba(26, 25, 25, 0.5);
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgba(26, 25, 25, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-.header-div{
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 0 auto;
-padding: 20px;
-background-color: rgba(26, 25, 25, 0.5);
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+.header-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(26, 25, 25, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 .pika {
-height:200px;
-width:auto;
+  height: 200px;
+  width: auto;
 }
 .squirtle {
-height:180px;
-margin-top:15px;
+  height: 180px;
+  margin-top: 15px;
 }
-.pika:hover, .squirtle:hover {
-animation: wiggle 0.5s ease-in-out;
+.pika:hover,
+.squirtle:hover {
+  animation: wiggle 0.5s ease-in-out;
 }
 .pokeapi:hover {
-   transform: scale(1.1);
+  transform: scale(1.1);
 }
 /*Modal Container*/
 .modal-container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.5);
-	display: none;
-	justify-content: center;
-	align-items: center;
-	z-index: 1050; /* Ensure modal is above other content */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* Ensure modal is above other content */
 }
 .modal-container.is-visible {
-	display: flex;
+  display: flex;
 }
 
 /*Button for list*/
@@ -67,7 +68,7 @@ animation: wiggle 0.5s ease-in-out;
 .pokemon-list .list-group-item {
   background-color: var(--white);
   padding: 10px;
-  margin:2px;
+  margin: 2px;
 }
 .round-buttonn {
   background-color: var(--secondary-red);
@@ -83,46 +84,49 @@ animation: wiggle 0.5s ease-in-out;
   font-weight: 700;
   font-size: 25px;
   cursor: pointer; /* Change to pointer for clickable */
-  transition: border 0.2s ease, font-size 0.2s ease;
+  transition:
+    border 0.2s ease,
+    font-size 0.2s ease;
   box-shadow: 1px 5px 10px rgba(241, 226, 226, 0.6);
 }
 .round-buttonn:hover,
 .round-buttonn:focus {
   border: 10px solid var(--grey);
   font-size: 40px;
-  background-color:var(--main-red);
+  background-color: var(--main-red);
   color: white;
   border-radius: 50%;
   text-decoration: underline;
-   transform: scale(1.2);
-} 
+  transform: scale(1.2);
+}
 /*Button for Bootstrap Portion*/
 .btn {
   border: none;
-  margin-bottom:5px;
+  margin-bottom: 5px;
   padding: 10px 20px;
-  font-size:30px;
+  font-size: 30px;
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-.btn:hover{
-background-color: var(--secondary-red);
-font-size: 38px;
-letter-spacing: 3px;
-font-variant: small-caps;
-text-decoration: underline;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
-text-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+.btn:hover {
+  background-color: var(--secondary-red);
+  font-size: 38px;
+  letter-spacing: 3px;
+  font-variant: small-caps;
+  text-decoration: underline;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
 }
-.modal-dialog, .modal-details{
-border:rgb(84, 79, 79) 5px solid;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-background-color: rgb(232, 229, 229);
-border-radius: 10px;
+.modal-dialog,
+.modal-details {
+  border: rgb(84, 79, 79) 5px solid;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgb(232, 229, 229);
+  border-radius: 10px;
 }
 .modal-details {
-padding-top:10px;
+  padding-top: 10px;
 }
 .modal-title {
   font-size: 40px;
@@ -133,52 +137,71 @@ padding-top:10px;
   letter-spacing: 2px;
 }
 .pokemon-image {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   object-fit: contain;
   border: 4px solid #ffcb05; /* Pokémon yellow border */
   border-radius: 12px;
-  background-color: rgb(59, 76, 202,.85); 
+  background-color: rgb(59, 76, 202, 0.85);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   padding: 10px;
   margin: 20px auto 10px;
   display: block;
-  margin:30px auto;
+  margin: 30px auto;
   border-radius: 20px;
 }
 .pokemon-image:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
+.search-wrapper {
+  font-size: 20px;
+
+}
 
 /* MEDIA QUERY SMALL DEVICE ADJUST */
 @media all and (max-width: 425px) {
-.pika {
-height:100px;
-width:auto;
-}
-.squirtle {
-height:80px;
-margin-top:15px;
-}
-.pokeapi {
-  height:68px;
-  width:auto;
-}
+  .pika {
+    height: 100px;
+    width: auto;
+  }
+  .squirtle {
+    height: 80px;
+    margin-top: 15px;
+  }
+  .pokeapi {
+    height: 68px;
+    width: auto;
+  }
 }
 
 /* KEY FRAMES ANIMATION */
 @keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  15% { transform: rotate(-5deg); }
-  30% { transform: rotate(5deg); }
-  45% { transform: rotate(-5deg); }
-  60% { transform: rotate(5deg); }
-  75% { transform: rotate(-5deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  45% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     top: 0;
     animation-timing-function: ease-in;
   }

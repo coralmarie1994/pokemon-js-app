@@ -13,5 +13,3 @@ Height
 Weight
 
 Frontal Sprite Image
-
-
